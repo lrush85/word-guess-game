@@ -1,0 +1,41 @@
+body {
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+h1 {
+    color: #fff;
+    margin-top: 20px;
+}
+
+
+ li {
+    display: inline;
+}
+
+button {
+    padding: 10px;
+    margin: 20px 20px 10px;
+    background-color: transparent;
+    color: white;
+    border-radius: 4px;
+    border-color: rgb(125, 228, 193);
+    width: 50px;
+    font-weight: 700;
+    outline: none;
+}
+
+button:hover, button:link, button:active, button:link {
+    background-color: white;
+    color: rgb(125, 228, 193);
+    border-color: white;
+    outline: none;
+}
+
+
+div#answer {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 28px;
+}
