@@ -3,39 +3,74 @@ body {
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
 
-h1 {
+img#nfl-header {
+    width: 100%;
+    height: auto;
+}
+
+h1#userName {
+    position: absolute;
     color: #fff;
-    margin-top: 20px;
+    margin-top: 40px;
+    font-size: 24px;
+    padding: 0 100px;
 }
 
-
- li {
+li.guess {
     display: inline;
+    color: #007bff;
+    font-size: 40px;
 }
 
-button {
+div#hold {
+    text-align: center;
+}
+
+ li#letter {
+    display: inline-block;
     padding: 10px;
-    margin: 20px 20px 10px;
+    margin: 20px 10px 10px;
     background-color: transparent;
-    color: white;
+    color: #007bff;
     border-radius: 4px;
-    border-color: rgb(125, 228, 193);
+    border: 1px solid #007bff;
     width: 50px;
     font-weight: 700;
     outline: none;
+    text-align: center;
 }
 
-button:hover, button:link, button:active, button:link {
+
+li#letter:hover, li#letter:link, li#letter:active, li#letter:link {
     background-color: white;
-    color: rgb(125, 228, 193);
+    color: #007bff;
     border-color: white;
     outline: none;
 }
 
-
-div#answer {
-    color: white;
+#reset {
+    display: inline-block;
     padding: 10px;
+    margin: 20px 20px 50px;
+    background-color: transparent;
+    color: #007bff;
+    border-radius: 4px;
+    border: 1px solid #007bff;
+    font-weight: 700;
+    outline: none;
     text-align: center;
-    font-size: 28px;
+}
+
+#reset:hover {
+    background-color: white;
+    color: #007bff;
+    border-color: white;
+    outline: none;
+}
+
+#lives {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
 }
