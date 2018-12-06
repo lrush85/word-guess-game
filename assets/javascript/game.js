@@ -1,5 +1,14 @@
 window.onload = function() {
 
+    
+    var userName = document.getElementById("user-name");
+    user = prompt("What is your name?");
+    userName.textContent = "Hello " + user + ". Welcome to the NFL Guessing Game.  All you have to do is choose the team we are thinking of.  Good Luck!!";
+
+    var favTeam = prompt("What is your favorite NFL team");
+    favTeam.toLocaleLowerCase();
+    
+
     //Create all variables need for the game.
 
 var lives;
@@ -74,8 +83,27 @@ var alpha = [
 
 var livesRemaining = document.getElementById("lives");
 
+switch(favTeam) {
+    case "broncos":
+        document.body.style.backgroundColor = "orange";
+        break;
+    
+    case "eagles":
+        document.body.style.backgroundColor = "olive";
+        break;
+
+    case "browns":
+        document.body.style.backgroundColor = "dark-orange";
+
+
+    default:
+        break;
+}
+
 // Create letters list of alphabet function
 // I created a buttons function that hold the alphabet with styles
+
+
 function buttons() {
 
     alphaButtons = document.getElementById('buttons');
@@ -86,7 +114,7 @@ function buttons() {
         list = document.createElement("li");
         list.id = "letter";
         list.innerHTML = alpha[i];
-        clicked();
+        isClicked();
         alphaButtons.appendChild(letters);
         letters.appendChild(list);
     }
@@ -98,10 +126,18 @@ function result() {
     wordHolder = document.getElementById("word");
     correct = document.createElement("ul");
 
+    // Iterating through each letter of the word
     for(var i = 0; i < word.length; i++) {
+
+        // Adding an id attribute to correct UL
         correct.setAttribute("id", "correct");
+
+        // Create an element for the guess var
         guess = document.createElement("li");
+
+        //setting a class attribute to guess LI
         guess.setAttribute("class", "guess");
+
         // if word index is equal to "-" then add guess to "-"
         // and space = 1
         // else add guess to " _ "
@@ -141,7 +177,7 @@ function status() {
 
 // Create a function that reacts to click of the li, handles change of status function and added guess to result if correct
 
-function clicked() {
+function isClicked() {
     list.onclick = function () {
         var guess = this.innerHTML;
         this.setAttribute("class", "active");
@@ -156,6 +192,7 @@ function clicked() {
         }
         //If the index of the guess is -1 then we want to decrement the lives remaining
         var indexWord = word.indexOf(guess);
+        // -1 refers to the letter not in the array
         if (indexWord === -1) {
             lives -= 1;
             status();
@@ -178,6 +215,7 @@ function play() {
     space = 0;
     result();
     status();
+
 }
 
 play();

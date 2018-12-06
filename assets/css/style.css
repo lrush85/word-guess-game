@@ -1,19 +1,21 @@
 body {
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    /* background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
+    background-color: #333;
 }
 
-img#nfl-header {
-    width: 100%;
-    height: auto;
+.jumbotron {
+    margin-top: 10px;
+}
+.container {
+    background-color: #333;
+}
+h1#user-name {
+    color: #333;
 }
 
-h1#userName {
-    position: absolute;
-    color: #fff;
-    margin-top: 40px;
-    font-size: 24px;
-    padding: 0 100px;
+ul#correct {
+    text-align: center;
 }
 
 li.guess {
@@ -51,7 +53,7 @@ li#letter:hover, li#letter:link, li#letter:active, li#letter:link {
 #reset {
     display: inline-block;
     padding: 10px;
-    margin: 20px 20px 50px;
+    margin: 127px 20px 50px;
     background-color: transparent;
     color: #007bff;
     border-radius: 4px;
@@ -73,4 +75,11 @@ li#letter:hover, li#letter:link, li#letter:active, li#letter:link {
     font-size: 20px;
     text-align: center;
 
+}
+
+li#letter.active {
+    background-color: white;
+    color: #007bff;
+    border-color: white;
+    outline: none;
 }
