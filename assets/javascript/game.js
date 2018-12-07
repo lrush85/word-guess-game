@@ -83,25 +83,25 @@ var alpha = [
 
 var livesRemaining = document.getElementById("lives");
 
-switch(favTeam) {
-    case "broncos":
-        document.body.style.backgroundColor = "orange";
-        break;
+// switch(favTeam) {
+//     case "broncos":
+//         document.body.style.backgroundColor = "orange";
+//         break;
     
-    case "eagles":
-        document.body.style.backgroundColor = "olive";
-        break;
+//     case "eagles":
+//         document.body.style.backgroundColor = "olive";
+//         break;
 
-    case "browns":
-        document.body.style.backgroundColor = "dark-orange";
+//     case "browns":
+//         document.body.style.backgroundColor = "dark-orange";
 
 
-    default:
-        break;
-}
+//     default:
+//         break;
+// }
 
 // Create letters list of alphabet function
-// I created a buttons function that hold the alphabet with styles
+// I created a button function that hold the alphabet with styles
 
 
 function buttons() {
