@@ -50,11 +50,151 @@ window.onload = function() {
 
     theme();
 
+
+
+    function logo() {
+        teamLogo = document.getElementById("team-logo");
+        teamLogoImg = document.createElement("img");
+        switch (favTeam) {
+            case "falcons": 
+                teamLogoImg.src = "./assets/images/Atlanta_Falcons_logo-300x285.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "cardinals":
+                teamLogoImg.src = "./assets/images/Arizona_Cardinals_logo-300x270.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "ravens":
+                teamLogoImg.src = "./assets/images/Baltimore_Ravens_logo-300x147.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "bills":
+                teamLogoImg.src = "./assets/images/Buffalo_Bills_logo-300x200.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "panthers":
+                teamLogoImg.src = "./assets/images/Carolina_Panthers_logo-300x164.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "bears":
+                teamLogoImg.src = "./assets/images/Chicago_Bears_logo-300x201.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "bengals":
+                teamLogoImg.src = "./assets/images/Cincinnati_Bengals_logo-300x211.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "browns":
+                teamLogoImg.src = "./assets/images/Cleveland_Browns_logo-300x232.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "cowboys":
+                teamLogoImg.src = "./assets/images/Dallas_Cowboys_logo-300x285.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "broncos":
+                teamLogoImg.src = "./assets/images/Denver_Broncos_logo-300x175.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "lions":
+                teamLogoImg.src = "./assets/images/Detroit_Lions_logo-300x230.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "packers":
+                teamLogoImg.src = "./assets/images/Green_Bay_Packers_logo-300x198.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "colts":
+                teamLogoImg.src = "./assets/images/indianapolis_colts_logo_colors.png";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "texans":
+                teamLogoImg.src = "./assets/images/Houston_Texans_logo-300x274.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "jaguars":
+                teamLogoImg.src = "./assets/images/Jacksonville_Jaguars_logo-300x226.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "chiefs":
+                teamLogoImg.src = "./assets/images/Kansas_City_Chiefs_logo-300x191.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "chargers":
+                teamLogoImg.src = "./assets/images/NFL_Chargers_logo-300x164.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "rams":
+                teamLogoImg.src = "./assets/images/Los_Angeles_Rams_logo-300x214.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "dolphins":
+                teamLogoImg.src = "./assets/images/dolphins_logo_2018-300x220.png";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "vikings":
+                teamLogoImg.src = "./assets/images/Minnesota_Vikings_logo-244x300.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "patriots":
+                teamLogoImg.src = "./assets/images/New_England_Patriots_logo-300x146.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "saints":
+                teamLogoImg.src = "./assets/images/New_Orleans_Saints_logo-246x300.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "giants":
+                teamLogoImg.src = "./assets/images/New_York_Giants_logo.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "jets":
+                teamLogoImg.src = "./assets/images/new_york_jets_colors-300x176.png";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "raiders":
+                teamLogoImg.src = "./assets/images/Oakland_Raiders_logo-283x300.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "eagles":
+                teamLogoImg.src = "./assets/images/Philadelphia_Eagles_logo-300x207.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "steelers":
+                teamLogoImg.src = "./assets/images/Pittsburgh_Steelers_logo-300x300.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "forty niners":
+                teamLogoImg.src = "./assets/images/San_Francisco_49ers_logo-300x177.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "seahawks":
+                teamLogoImg.src = "./assets/images/Seattle_Seahawks_logo-300x133.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "buccaneers":
+                teamLogoImg.src = "./assets/images/bucs_97-300x276.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "titans":
+                teamLogoImg.src = "./assets/images/Tennessee_Titans_logo-300x214.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            case "redskins":
+                teamLogoImg.src = "./assets/images/Washington_Redskins_logo-279x300.jpg";
+                teamLogo.appendChild(teamLogoImg);
+                break;
+            default:
+            teamLogoImg.src = "./assets/images/nfllogo.gif";
+            teamLogo.appendChild(teamLogoImg);
+        }
+    }
+    logo();
+
     function favoriteTeam(favTeam) {
 
         teamName = document.getElementsByClassName("team-background");
-        teamLogo = document.getElementById("team-logo");
-        teamLogoImg = document.createElement("img");
+        
 
         for(var i = 0; i < teamName.length; i++) {
 
@@ -63,224 +203,161 @@ window.onload = function() {
                 case "falcons":
                     document.body.style.backgroundColor = "#A71930";
                     teamName[i].style.backgroundColor = "#A71930";
-                    teamLogoImg.src = "./assets/images/Atlanta_Falcons_logo-300x285.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
                 
                 case "cardinals":
                     document.body.style.backgroundColor = "#97233F";
                     teamName[i].style.backgroundColor = "#97233F";
-                    teamLogoImg.src = "./assets/images/Arizona_Cardinals_logo-300x270.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "ravens":
                     document.body.style.backgroundColor = "#241773";
                     teamName[i].style.backgroundColor = "#241773";
-                    teamLogoImg.src = "./assets/images/Baltimore_Ravens_logo-300x147.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "bills":
                     document.body.style.backgroundColor = "#C60C30";
                     teamName[i].style.backgroundColor = "#C60C30";
-                    teamLogoImg.src = "./assets/images/Buffalo_Bills_logo-300x200.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "panthers":
                     document.body.style.backgroundColor = "#0085ca";
                     teamName[i].style.backgroundColor = "#0085ca"; 
-                    teamLogoImg.src = "./assets/images/Carolina_Panthers_logo-300x164.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "bears":
                     document.body.style.backgroundColor = "#0B162A";
                     teamName[i].style.backgroundColor = "#0B162A";
-                    teamLogoImg.src = "./assets/images/Chicago_Bears_logo-300x201.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "bengals":
                     document.body.style.backgroundColor = "#FB4F14";
                     teamName[i].style.backgroundColor = "#FB4F14";
-                    teamLogoImg.src = "./assets/images/Cincinnati_Bengals_logo-300x211.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "browns":
                     document.body.style.backgroundColor = "#FF3C00";
                     teamName[i].style.backgroundColor = "#FF3C00";
-                    teamLogoImg.src = "./assets/images/Cleveland_Browns_logo-300x232.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "cowboys":
                     document.body.style.backgroundColor = "#041E42";
                     teamName[i].style.backgroundColor = "#041E42";
-                    teamLogoImg.src = "./assets/images/Dallas_Cowboys_logo-300x285.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "broncos":
                     document.body.style.backgroundColor = "#002244";
                     teamName[i].style.backgroundColor = "#002244";
-                    teamLogoImg.src = "./assets/images/Denver_Broncos_logo-300x175.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "lions":
                     document.body.style.backgroundColor = "#0076B6";
                     teamName[i].style.backgroundColor = "#0076B6";
-                    teamLogoImg.src = "./assets/images/Detroit_Lions_logo-300x230.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "packers":
                     document.body.style.backgroundColor = "#203731";
                     teamName[i].style.backgroundColor = "#203731";
-                    teamLogoImg.src = "./assets/images/Green_Bay_Packers_logo-300x198.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "texans":
                     document.body.style.backgroundColor = "#03202F";
                     teamName[i].style.backgroundColor = "#03202F";
-                    teamLogoImg.src = "./assets/images/Houston_Texans_logo-300x274.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "colts":
                     document.body.style.backgroundColor = "#002C5F";
                     teamName[i].style.backgroundColor = "#002C5F";
-                    teamLogoImg.src = "./assets/images/indianapolis_colts_logo_colors.png";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "jaguars":
                     document.body.style.backgroundColor = "#006778";
                     teamName[i].style.backgroundColor = "#006778";
-                    teamLogoImg.src = "./assets/images/Jacksonville_Jaguars_logo-300x226.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "chiefs":
                     document.body.style.backgroundColor = "#E31837";
                     teamName[i].style.backgroundColor = "#E31837";
-                    teamLogoImg.src = "./assets/images/Kansas_City_Chiefs_logo-300x191.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "chargers":
                     document.body.style.backgroundColor = "#002A5E";
                     teamName[i].style.backgroundColor = "#002A5E";
-                    teamLogoImg.src = "./assets/images/NFL_Chargers_logo-300x164.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "rams":
                     document.body.style.backgroundColor = "#002244";
                     teamName[i].style.backgroundColor = "#002244";
-                    teamLogoImg.src = "./assets/images/Los_Angeles_Rams_logo-300x214.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "dolphins":
                     document.body.style.backgroundColor = "#008E97";
                     teamName[i].style.backgroundColor = "#008E97";
-                    teamLogoImg.src = "./assets/images/dolphins_logo_2018-300x220.png";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "vikings":
                     document.body.style.backgroundColor = "#4F2683";
                     teamName[i].style.backgroundColor = "#4F2683";
-                    teamLogoImg.src = "./assets/images/Minnesota_Vikings_logo-244x300.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "patriots":
                     document.body.style.backgroundColor = "#012169";
                     teamName[i].style.backgroundColor = "#012169";
-                    teamLogoImg.src = "./assets/images/New_England_Patriots_logo-300x146.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "saints":
                     document.body.style.backgroundColor = "#D3BC8D";
                     teamName[i].style.backgroundColor = "#D3BC8D";
-                    teamLogoImg.src = "./assets/images/New_Orleans_Saints_logo-246x300.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "giants":
                     document.body.style.backgroundColor = "#0B2265";
                     teamName[i].style.backgroundColor = "#0B2265";
-                    teamLogoImg.src = "./assets/images/New_York_Giants_logo.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "jets":
                     document.body.style.backgroundColor = "#003F2D";
                     teamName[i].style.backgroundColor = "#003F2D";
-                    teamLogoImg.src = "./assets/images/new_york_jets_colors-300x176.png";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "raiders":
                     document.body.style.backgroundColor = "#000000";
                     teamName[i].style.backgroundColor = "#000000";
-                    teamLogoImg.src = "./assets/images/Oakland_Raiders_logo-283x300.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "eagles":
                     document.body.style.backgroundColor = "#004C54";
                     teamName[i].style.backgroundColor = "#004C54";
-                    teamLogoImg.src = "./assets/images/Philadelphia_Eagles_logo-300x207.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "steelers":
                     document.body.style.backgroundColor = "#101820";
                     teamName[i].style.backgroundColor = "#101820";
-                    teamLogoImg.src = "./assets/images/Pittsburgh_Steelers_logo-300x300.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "forty niners":
                     document.body.style.backgroundColor = "#AA0000";
                     teamName[i].style.backgroundColor = "#AA0000";
-                    teamLogoImg.src = "./assets/images/San_Francisco_49ers_logo-300x177.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "seahawks":
                     document.body.style.backgroundColor = "#002244";
                     teamName[i].style.backgroundColor = "#002244";
-                    teamLogoImg.src = "./assets/images/Seattle_Seahawks_logo-300x133.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "buccaneers":
                     document.body.style.backgroundColor = "#D50A0A";
-                    teamName[i].style.backgroundColor = "#D50A0A";teamLogoImg.src = "./assets/images/bucs_97-300x276.jpg";
-                    teamLogo.appendChild(teamLogoImg);
+                    teamName[i].style.backgroundColor = "#D50A0A";
                     break;
 
                 case "titans":
                     document.body.style.backgroundColor = "#002A5C";
                     teamName[i].style.backgroundColor = "#002A5C";
-                    teamLogoImg.src = "./assets/images/Tennessee_Titans_logo-300x214.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
                 case "redskins":
                     document.body.style.backgroundColor = "#773141";
                     teamName[i].style.backgroundColor = "#773141";
-                    teamLogoImg.src = "./assets/images/Washington_Redskins_logo-279x300.jpg";
-                    teamLogo.appendChild(teamLogoImg);
                     break;
 
             }
@@ -797,6 +874,7 @@ window.onload = function() {
         // Clears out the letters.
         correct.parentNode.removeChild(correct);
         letters.parentNode.removeChild(letters);
+        
         play();
     };
 
