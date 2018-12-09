@@ -12,29 +12,32 @@
 </head>
 <body class="teamColorBackground">
         <header>
+            <audio preload="auto" src="./assets/nfl-on-fox-theme-song-QLkOEL1u.mp3" id="theme-song"></audio>
+            
             <div class="container-fluid">
                 <div class="jumbotron">
-                    <h1 id="user-name"></h1>
+                    <div class="row">
+                        <div class="col-md-3" id="team-logo"></div>
+                        <div class="col-md-9">
+                            <h1 id="user-name"></h1>
+                        </div>
+                    </div>
                 </div>
-            </div>
-                
-                
-                
-            </header>
-            <div class="container teamColorBackground">
+            </div> 
+        </header>
+            <div class="container team-background">
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
-                        <div id="buttons"></div>
+                        <div id="buttons">
+                            <audio src="./assets/referee_whistle_sound_effect-Rs2XUtW6.mp3" id="whistle"></audio>
+                        </div>
                     </div>
                     <div class="col-sm-6">    
-                        <div id="word">
-                        </div>
-
-
+                        <div id="word"></div>
                         <p id="lives"></p>
                         <div class="row">
                             <div class="col-md-2"></div>
-                            <button class="col-md-11" id="reset">Restart</button>
+                            <button class="col-md-11 reset-button" id="reset">Restart</button>
                         </div>
                     </div>
                 </div>

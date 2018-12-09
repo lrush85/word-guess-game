@@ -4,9 +4,17 @@ body {
     background-color: #333;
 }
 
+
 .jumbotron {
     margin-top: 10px;
+    background-color: #fff;
 }
+
+img {
+    width: 200px;
+    display: inline-block;
+}
+
 .container {
     background-color: #333;
 }
@@ -83,3 +91,4 @@ li#letter.active {
     border-color: white;
     outline: none;
 }
+
