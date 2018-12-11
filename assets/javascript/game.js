@@ -42,7 +42,7 @@ window.onload = function() {
         themeSong.play();
 
         setInterval(function(){
-            if(themeSong.currentTime>40) {
+            if(themeSong.currentTime>30) {
                 themeSong.pause();
                 }
             }, 1000);
